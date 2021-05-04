@@ -11,7 +11,8 @@
     "build": "rm -rf dist && webpack",
     "watch": "WEBPACK_WATCH=true npm run build",
     "start": "electron .",
-    "pack": "NODE_ENV=production npm run build && node bin/pack.js"
+    "pack": "NODE_ENV=production npm run build && node bin/pack.js",
+    "package":"electron-packager . medis --platform=win32 --arch=x64 --out=./out --asar --app-version=0.0.1 --overwrite --ignore=node_modules"
   },
   "repository": {
     "type": "git",
@@ -80,6 +81,6 @@
     "url-loader": "^1.1.2",
     "webpack": "^4.31.0",
     "webpack-bundle-analyzer": "^3.3.2",
-    "webpack-cli": "^3.3.2"
+    "webpack-cli": "^4.6.0"
   }
 }
